@@ -1,0 +1,4 @@
+#!/bin/bash
+
+#ssh -XY spdaq03.nscl.msu.edu $HOME/bin/bookwormcmd $HOME/bin/start_readout_ddas_standalone
+ssh -XY spdaq03.nscl.msu.edu $HOME/bin/bustercmd $HOME/bin/start_readout_ddas_standalone

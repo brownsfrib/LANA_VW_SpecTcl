@@ -1,0 +1,9 @@
+Define parameters in MyParameters
+Map them based on the hit data in MyParameterMapper
+Tcl script is only for making histograms and such (saving session)
+
+If you want to put in any calibrations or cable delays or anything, 
+	that will occur in a custom class (like MyCalibrator)
+
+You should:
+	- Take the yaml parser and write a nice configuration file

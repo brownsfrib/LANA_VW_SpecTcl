@@ -1,0 +1,38 @@
+Geometry 1,5
+# /user/hira/LANA/PXI/spectcl/config/NWA.win Written by @(#)dispwind.cc	2.2 1/28/94  at Fri Aug 14 11:55:10 2026
+
+Window  0,0,"BAR4"
+   SCALE Manual 40
+   COUNTSAXIS  LOG
+   Floor 0
+   Refresh 2
+   MAPPED 1
+Endwindow
+Window  0,1,"BAR3"
+   SCALE Manual 10
+   COUNTSAXIS  LOG
+   Floor 0
+   Refresh 2
+   MAPPED 1
+Endwindow
+Window  0,2,"BAR2"
+   SCALE Manual 80
+   COUNTSAXIS  LOG
+   Floor 0
+   Refresh 2
+   MAPPED 1
+Endwindow
+Window  0,3,"BAR1"
+   SCALE Manual 10
+   COUNTSAXIS  LOG
+   Floor 0
+   Refresh 2
+   MAPPED 1
+Endwindow
+Window  0,4,"BAR0"
+   SCALE Manual 10
+   COUNTSAXIS  LOG
+   Floor 0
+   Refresh 2
+   MAPPED 1
+Endwindow

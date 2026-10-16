@@ -1,0 +1,78 @@
+e23058    4026  0.0  0.0   2384  1512 ?        Ss   08:05   0:00 /bin/sh /etc/xdg/xfce4/xinitrc -- /etc/X11/xinit/xserverrc
+e23058    4037  0.0  0.0  10984  2376 ?        S    08:05   0:00 dbus-launch --autolaunch ef3179ec6c324fe391c165d1b30341c6 --binary-syntax --close-stderr
+e23058    4038  0.0  0.0   8872  2476 ?        Ss   08:05   0:00 /usr/bin/dbus-daemon --syslog-only --fork --print-pid 5 --print-address 7 --session
+e23058    4062  0.0  0.0  10984  2180 ?        S    08:05   0:00 /usr/bin/dbus-launch --exit-with-session --sh-syntax
+e23058    4063  0.0  0.0   9568  3776 ?        Ss   08:05   0:03 /usr/bin/dbus-daemon --syslog --fork --print-pid 5 --print-address 7 --session
+e23058    4072  0.0  0.0   5860   472 ?        Ss   08:05   0:00 /usr/bin/ssh-agent x-session-manager
+e23058    4082  0.0  0.2 212516 18272 ?        Sl   08:05   0:00 xfce4-session
+e23058    4084  0.0  0.0 310536  6492 ?        Sl   08:05   0:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+e23058    4089  0.0  0.0   8868  4088 ?        S    08:05   0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+e23058    4091  0.0  0.0 172104  6740 ?        Sl   08:05   0:00 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+e23058    4096  0.0  0.0  14668  5560 ?        S    08:05   0:00 /usr/lib/x86_64-linux-gnu/xfce4/xfconf/xfconfd
+e23058    4101  0.0  0.0   7536   272 ?        Ss   08:05   0:00 /usr/bin/gpg-agent --sh --daemon --write-env-file /user/e23058/.cache/gpg-agent-info
+e23058    4102  0.3  0.3  68072 25348 ?        S    08:05   0:51 xfwm4 --display :0.0 --sm-client-id 24a96f824-1ad8-4d5c-9e67-899e2617413d
+e23058    4103  0.0  0.5 419964 44464 ?        Sl   08:05   0:00 Thunar --sm-client-id 2666d0614-ccf5-4c0b-a685-141d1a3fd9ea --daemon
+e23058    4107  0.0  0.0 238372  7252 ?        Sl   08:05   0:00 /usr/lib/gvfs/gvfsd
+e23058    4117  0.0  0.4 279232 39332 ?        Sl   08:05   0:02 xfce4-panel --display :0.0 --sm-client-id 2b3ed21be-38e9-43d4-937a-cb5ec88f5782
+e23058    4119  0.0  0.2 245448 20028 ?        Ssl  08:05   0:00 xfsettingsd --display :0.0 --sm-client-id 2b5c85279-82ad-4ff5-9d1c-80bb54d327b5
+e23058    4121  0.0  1.2 511756 99904 ?        Sl   08:05   0:06 xfdesktop --display :0.0 --sm-client-id 23029583b-85c0-4128-a349-ac8c506268a8
+e23058    4147  0.1  0.2  63108 16196 ?        S    08:05   0:14 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-1.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libsystray.so 6 23068711 systray Notification Area Area where notification icons appear
+e23058    4149  0.1  0.3 298012 31372 ?        Sl   08:05   0:15 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libpulseaudio-plugin.so 8 23068712 pulseaudio PulseAudio Plugin Adjust the audio volume of the PulseAudio sound system
+e23058    4150  0.0  0.4 259568 33976 ?        Sl   08:05   0:00 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libnotification-plugin.so 10 23068713 notification-plugin Notification Plugin Notification plugin for the Xfce panel
+e23058    4151  0.0  0.2  65068 19704 ?        S    08:05   0:00 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-1.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libactions.so 14 23068714 actions Action Buttons Log out, lock or other system actions
+e23058    4155  0.0  0.1 278892 11580 ?        Sl   08:05   0:00 /usr/lib/gvfs/gvfs-udisks2-volume-monitor
+e23058    4160  0.0  0.1 317316  9384 ?        Sl   08:05   0:00 /usr/lib/gvfs/gvfs-afc-volume-monitor
+e23058    4166  0.0  0.1 239080  8864 ?        Sl   08:05   0:00 /usr/lib/gvfs/gvfs-gphoto2-volume-monitor
+e23058    4171  0.0  0.0 234640  5908 ?        Sl   08:05   0:00 /usr/lib/gvfs/gvfs-goa-volume-monitor
+e23058    4175  0.0  0.4 564360 37728 ?        Sl   08:05   0:00 /usr/lib/gnome-online-accounts/goa-daemon
+e23058    4182  0.0  0.1 239728  9028 ?        Sl   08:05   0:05 /usr/lib/gnome-online-accounts/goa-identity-service
+e23058    4188  0.0  0.0 236472  6132 ?        Sl   08:05   0:00 /usr/lib/gvfs/gvfs-mtp-volume-monitor
+e23058    4205  0.0  0.0 235868  4716 ?        Sl   08:05   0:00 /usr/lib/geoclue-2.0/demos/agent
+e23058    4208  0.0  0.0 312472  7612 ?        Sl   08:05   0:00 /usr/lib/gvfs/gvfsd-trash --spawner :1.10 /org/gtk/gvfs/exec_spaw/0
+e23058    4209  0.0  0.7 670792 62360 ?        Sl   08:05   0:00 /usr/lib/evolution/evolution-data-server/evolution-alarm-notify
+e23058    4224  0.0  0.0 163052  6040 ?        Sl   08:05   0:00 /usr/lib/gvfs/gvfsd-metadata
+e23058    4229  0.0  0.3 1117584 24580 ?       SNl  08:05   0:00 /usr/lib/tracker/tracker-miner-fs
+e23058    4233  0.0  0.3 675168 29768 ?        Sl   08:05   0:00 /usr/lib/tracker/tracker-store
+e23058    4235  0.0  0.4 331236 33420 ?        Sl   08:05   0:00 /usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd
+e23058    4238  0.0  0.0 157160  7004 ?        Sl   08:05   0:00 /usr/lib/dconf/dconf-service
+e23058    4239  0.0  0.2 1114072 22184 ?       SNl  08:05   0:00 /usr/lib/tracker/tracker-miner-apps
+e23058    4255  0.0  0.0  28156  5460 ?        S    08:05   0:01 xscreensaver -no-splash
+e23058    4283  0.4  0.4 367592 35268 ?        Sl   08:05   1:03 nm-applet
+e23058    4301  0.0  0.3 1089224 27464 ?       Sl   08:05   0:00 /usr/lib/evolution/evolution-source-registry
+e23058    4338  0.0  0.4 930948 36096 ?        Sl   08:05   0:00 /usr/lib/evolution/evolution-calendar-factory
+e23058    4364  0.0  0.3 672780 30584 ?        Sl   08:05   0:00 /usr/lib/evolution/evolution-addressbook-factory
+e23058    4875  0.0  0.6 494740 49768 ?        Sl   08:07   0:06 /usr/lib/gnome-terminal/gnome-terminal-server
+e23058    4882  0.0  0.0   7448  4012 pts/0    Ss   08:07   0:00 bash
+e23058    5196  2.4  0.1  16560  8084 pts/0    S+   08:07   5:49 ssh -Y frog@spdaq21
+e23058    5271  0.0  0.0   7448  3784 pts/2    Ss   08:08   0:00 bash
+e23058    5300  0.0  0.0  16432  7752 pts/2    S+   08:08   0:00 ssh -Y frog@spdaq21
+e23058    5420  0.0  0.0   7448  3856 pts/4    Ss   08:08   0:00 bash
+e23058    5446  0.0  0.0   7448  3840 pts/5    Ss+  08:08   0:00 bash
+e23058    5612  0.0  0.4 402872 35100 ?        Sl   08:09   0:00 xfce4-appfinder
+e23058    5939  0.0  0.0  16572  7792 pts/4    S+   08:11   0:05 ssh -Y frog@spdaq21
+root      9173  0.0  0.1  14764  8892 ?        Ss   11:09   0:00 sshd: e23058 [priv]
+e23058    9180  0.2  0.0  14912  6456 ?        S    11:09   0:06 sshd: e23058@pts/12
+e23058    9184  0.0  0.0   8636  5308 pts/12   Ss   11:09   0:00 -bash
+hira      9855  0.5  0.0  14488  7820 pts/11   S+   11:13   0:16 ssh -Y e23058@spdaq21
+root      9856  0.0  0.1  14764  8912 ?        Ss   11:13   0:00 sshd: e23058 [priv]
+e23058    9862  0.6  0.0  14964  6176 ?        S    11:13   0:20 sshd: e23058@pts/13
+e23058    9865  0.0  0.0   8632  5308 pts/13   Ss+  11:13   0:00 -bash
+e23058   11095  0.0  0.2  77372 20116 ?        Ss   11:20   0:01 /usr/opt/daq/12.0-029/bin/stdintoring --mindata=32768 --timeout=2 spdaq03.nscl.msu.edu.e23058_ddas_evb
+e23058   11121  0.0  0.2  77372 19932 ?        Ss   11:20   0:00 /usr/opt/daq/12.0-029/bin/stdintoring --mindata=32768 --timeout=2 spdaq03.nscl.msu.edu.e23058_ddas_sort
+e23058   16990  0.0  0.1 238776  8412 ?        Sl   09:05   0:00 /usr/bin/gnome-keyring-daemon --start --foreground --components=secrets
+e23058   17466 35.7  0.2 258524 16948 ?        SNl  11:52   3:31 m6502 -root
+e23058   17468  2.5  0.5  84784 48148 ?        SN   11:52   0:15 abstractile -root
+e23058   18219  1.4  0.2 145996 19072 pts/12   Sl   11:56   0:04 /usr/opt/daq/11.3-019/bin/ringselector --non-blocking --source=tcp://spdaq03/e23058_ddas_sort --sample=PHYSICS_EVENT
+root     18450  0.0  0.1  14764  8736 ?        Ss   11:58   0:00 sshd: e23058 [priv]
+e23058   18456  0.0  0.0  14832  6064 ?        S    11:58   0:00 sshd: e23058@pts/14
+e23058   18458  0.0  0.0   8636  5212 pts/14   Ss   11:58   0:00 -bash
+e23058   18574  0.5  0.2  70832 18668 pts/14   S+   11:58   0:01 vim mapper.cpp
+e23058   19362  0.0  0.0  11092  3308 pts/12   R+   12:02   0:00 ps aux
+e23058   19363  0.0  0.0   6516   888 pts/12   S+   12:02   0:00 grep --color=auto e23058
+e23058   19378  0.0  0.0   7448  4040 pts/7    Ss   09:19   0:00 bash
+e23058   19475  0.0  0.0   7556  4000 pts/8    Ss   09:19   0:00 bash
+e23058   20071  0.0  0.0  16436  7924 pts/7    S+   09:24   0:00 ssh -X spdaq33
+e23058   20950  0.0  0.0   7448  3928 pts/9    Ss   09:30   0:00 bash
+e23058   20979  0.0  0.0  16432  7804 pts/9    S+   09:30   0:00 ssh -X e25001@spdaq21
+e23058   24490  0.0  0.0   6948  3008 pts/8    S+   09:43   0:00 /bin/bash ./goChips
+e23058   24491  0.0  0.0  16536  7836 pts/8    S+   09:43   0:00 ssh -X e23058@spdaq33 /user/e23058/bin/bustercmd /user/e23058/bin/start_CHIPS

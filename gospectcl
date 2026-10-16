@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cmd="$HOME/bin/start_spectcl_ddas"
+$HOME/bin/bustercmd $cmd

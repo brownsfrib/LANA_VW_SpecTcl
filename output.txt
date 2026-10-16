@@ -1,0 +1,138 @@
+// Project includes
+#include "mapper.h"
+#include "parameters.h"
+
+// Make it possible to write DDASHit instead of DAQ::DDAS::DDASHit:
+using DAQ::DDAS::DDASHit;
+
+//________________________________________________________________________
+// Initialize the parameters and channel map.
+//
+// To add additional crates:
+//     m_chanMap[crateID] = startIndex;
+//
+// A full crate of Pixie-16 digitizers contains 208 channels. For a second
+// crate, starting at channel 208, one would add the fllowing line:
+//     m_chanMap[1] = 208;
+//
+mapper::mapper(parameters& params) : m_params(params), m_chanMap(){
+	//std::vectorModuleInfo> modules = {
+	//	{},
+	//};
+	//buildChannelMap(modules);
+}
+
+//________________________________________________________________________
+// 
+void mapper::mapToParameters(
+		const std::vector<DDASHit>& channelData,
+		CEvent& rEvent){
+
+	size_t nHits = channelData.size();
+	m_params.multiplicity = nHits;
+
+	// Loop over all hits in event:
+	std::vector<double> timeLeft(m_params.nModules*m_params.nChannels, std::nan(""));
+	std::vector<double> timeRight(m_params.nModules*m_params.nChannels, std::nan(""));
+	for (size_t i=0; i < nHits; i++){
+		// Convenience variable declared to refer to the i^th hit
+		const DDASHit& hit 			= channelData[i];
+		int slotID				= hit.getSlotID()-2;
+		int channelID				= hit.getChannelID();
+		int globalChanIdx 			= computeGlobalIndex(hit);
+		const double cfdTime			= hit.getTime();
+		if (
+			(channelID == 2)
+			&&(slotID == 1)
+			||
+			(channelID == 3)
+			&&(slotID == 1)
+			||
+			(channelID == 4)
+			&&(slotID == 2)
+			||
+			(channelID == 5)
+			&&(slotID == 2)
+		){
+			std::cout << "slotID: " << slotID << '\t';
+			std::cout << "channelID: " << channelID << '\n';
+		}
+		
+		// ------------------ Saving raw data --------------------
+		m_params.chan[globalChanIdx].energy    	= hit.getEnergy(); 	// Output of fast energy filter
+		m_params.chan[globalChanIdx].timestamp 	= cfdTime;		// CFD timestamp 
+		// ------------------ Saving raw data --------------------
+
+		// ------------- Constructing summary plots --------------
+
+
+		// -------- Constructing time difference plots -----------
+		// Quick and dirty
+		if ((channelID % 2) != 0){ // left PMTs in odd channels
+			timeLeft[globalChanIdx] = cfdTime;
+		}
+		else{
+			timeRight[globalChanIdx] = cfdTime;
+		}
+	}
+	
+	// Bar 0
+	if (
+		(!std::isnan(timeRight[0*m_params.nModules + 0]))
+	       	&&(!std::isnan(timeLeft[0*m_params.nModules + 1]))
+	){
+		m_params.bar[0].timeDiff = 
+			timeRight[0*m_params.nModules + 0] - 
+			timeLeft[0*m_params.nModules + 1];
+	}
+
+	// Bar 1
+	if (
+		(!std::isnan(timeRight[1*m_params.nModules + 2]))
+	       	&&(!std::isnan(timeLeft[1*m_params.nModules + 3]))
+	){
+		m_params.bar[1].timeDiff = 
+			timeRight[1*m_params.nModules + 2] - 
+			timeLeft[1*m_params.nModules + 3];
+	}
+
+	// Bar 2
+	if (
+		(!std::isnan(timeRight[2*m_params.nModules + 4]))
+	       	&&(!std::isnan(timeLeft[2*m_params.nModules + 5]))
+	){
+		m_params.bar[2].timeDiff = 
+			timeRight[2*m_params.nModules + 4] - 
+			timeLeft[2*m_params.nModules + 5];
+	}
+
+	// Bar 3
+	if (
+		(!std::isnan(timeRight[3*m_params.nModules + 6]))
+	       	&&(!std::isnan(timeLeft[3*m_params.nModules + 7]))
+	){
+		m_params.bar[3].timeDiff = 
+			timeRight[3*m_params.nModules + 6] - 
+			timeLeft[3*m_params.nModules + 7];
+	}
+
+	// Bar 4
+	if (
+		(!std::isnan(timeRight[4*m_params.nModules + 8]))
+	       	&&(!std::isnan(timeLeft[4*m_params.nModules + 9]))
+	){
+		m_params.bar[4].timeDiff = 
+			timeRight[4*m_params.nModules + 8] - 
+			timeLeft[4*m_params.nModules + 9];
+	}
+	
+}
+
+//________________________________________________________________________
+int mapper::computeGlobalIndex(const DDASHit& hit){
+	int crateId 		= hit.getCrateID();
+	int slotIdx 		= hit.getSlotID() - 2;
+	int chanIdx 		= hit.getChannelID();
+	const int nChanPerSlot 	= 16;
+	return m_chanMap[crateId] + slotIdx*nChanPerSlot + chanIdx;
+}
